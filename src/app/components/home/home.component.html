@@ -1,0 +1,20 @@
+<h1 class="text-center">Listado de empleados</h1>
+<div class="container">
+    <div class="d-flex flex-wrap justify-content-around">
+        <div *ngFor="let user of userList"> 
+            <div class="card mb-4" style="width: 18rem;">
+                <img src={{user.picture.large}} class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{user.name.first}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Gender: {{user.gender}}</li>
+                <li class="list-group-item">Email: {{user.email}}</li>
+                <li class="list-group-item">City: {{user.location.city}}</li>
+                <li class="list-group-item">Country: {{user.location.country}}</li>
+                <li class="list-group-item">Phone: {{user.phone}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
